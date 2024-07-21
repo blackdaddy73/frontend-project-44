@@ -10,3 +10,4 @@ startgame: #запускает игру
 
 other: #прочие команды
 	npm publish --dry-run
+	make lint

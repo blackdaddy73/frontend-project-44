@@ -7,6 +7,7 @@ start: #запуск проекта
 startgame: #запускает игру
 
 	node bin/brain-games.js
+	node bin/brain-even.js
 
 other: #прочие команды
 	npm publish --dry-run

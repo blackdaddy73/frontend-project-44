@@ -4,7 +4,8 @@ welcome();
 import readlineSync from 'readline-sync';
 const brainEven = () => {
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-for (let NumberOfAnswers = 0; NumberOfAnswers !== 3;) {
+let NumberOfAnswers = 0
+for (; NumberOfAnswers !== 3;) {
 let randomNumber = Math.round(Math.random(1) * 99) + 1;
 let isEven = true;
 let correctAnswer = 'yes';
@@ -17,13 +18,13 @@ if (answer === correctAnswer) {
     NumberOfAnswers += 1;
     }
     else {
-        console.log(`${answer}is wrong answer ;(. Correct answer was ${correctAnswer}`);
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
         break;
-    }
+    } 
     };
 if (NumberOfAnswers === 3) {
-    confirm.log(`Congratulations, sir`);
+    console.log(`Congratulations, sir`);
 }
 else console.log('Game over');
 };
-
+brainEven();

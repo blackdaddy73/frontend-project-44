@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import welcome from '../src/cli.js';
+import welcome from '../../src/cli.js';
 welcome();
 import readlineSync from 'readline-sync';
 const brainEven = () => {
@@ -23,8 +23,8 @@ if (answer === correctAnswer) {
     } 
     };
 if (NumberOfAnswers === 3) {
-    console.log(`Congratulations, sir`);
+    console.log(`Congratulations, ${name}`);
 }
-else console.log('Game over');
+else console.log(`Game over ${name}`);
 };
 brainEven();

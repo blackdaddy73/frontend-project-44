@@ -3,15 +3,17 @@ import welcome from './cli.js';
 import readlineSync from 'readline-sync';
 const name = welcome();
 import brainEven from '../bin/games/brain-even.js';
-for (let NumberOfAnswers = 0; NumberOfAnswers !== 3;) {
+import brainCalc from '../bin/games/brain-calc.js';
+let NumberOfAnswers = 0;
+for ( ; NumberOfAnswers !== 3; ) {
     let correctAnswer = brainEven();
-    const answer = readlineSync.question('Your answer: ');
-    if (answer === correctAnswer) {
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer === correctAnswer) {
         console.log('Correct!');
         NumberOfAnswers += 1;
         }
         else {
-            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
             break;
         } 
         };

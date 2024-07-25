@@ -4,6 +4,8 @@ import readlineSync from 'readline-sync';
 const name = welcome();
 import brainEven from '../bin/games/brain-even.js';
 import brainCalc from '../bin/games/brain-calc.js';
+import gameSelection from '../utilities/game-selection.js';
+
 let NumberOfAnswers = 0;
 for ( ; NumberOfAnswers !== 3; ) {
     let correctAnswer = brainEven();

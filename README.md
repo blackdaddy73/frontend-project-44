@@ -6,6 +6,9 @@
 
 https://asciinema.org/a/YqIkqt6iUeXRjksVlmkIHzRPi
 
-This is link
-It is my first brain-even game
+This is link brain-even asciinema game.
+
+https://asciinema.org/a/18rOpTYNsTehPHSymA3TWdDCu
+
+This is link brain-calc asciinema game.
 

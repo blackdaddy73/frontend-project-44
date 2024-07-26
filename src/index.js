@@ -27,6 +27,6 @@ for ( ; NumberOfAnswers !== 3; ) {
         } 
         };
     if (NumberOfAnswers === 3) {
-        console.log(`Congratulations, ${name}`);
+        console.log(`Congratulations, ${name}!`);
     }
     else console.log(`Let's try again, ${name}!`);

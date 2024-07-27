@@ -7,10 +7,8 @@ import brainCalc from '../bin/games/brain-calc.js';
 import brainGCD from '../bin/games/brain-gcd.js';
 import brainProgression from '../bin/games/brain-progression.js';
 import brainPrime from '../bin/games/brain-prime.js';
-//import gameSelection from '../utilities/game-selection.js';
 let selection = Math.round(Math.random(1) * 4) + 1; //не более 5 вариантов, позже сделаем выбор макс вариантов
 let game = 1;
-selection = 5; //Для тестов временно
     switch (selection) {
         case 1: game = brainEven;
         break;

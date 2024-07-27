@@ -4,6 +4,9 @@
 (https://api.codeclimate.com/v1/badges/7b153d0c66084126031b/maintainability)]
 (https://codeclimate.com/github/blackdaddy73/frontend-project-44/maintainability)
 
+This is my first project.
+
+
 https://asciinema.org/a/YqIkqt6iUeXRjksVlmkIHzRPi
 
 This is link brain-even asciinema game.

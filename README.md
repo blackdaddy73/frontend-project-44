@@ -16,3 +16,11 @@ https://asciinema.org/a/AwdHvWSFWJWW0Fwc0qXMASRHu
 
 This is link brain-gcd asciinema game.
 
+https://asciinema.org/a/WVwPdvQNsDUGYB78SBY7PYRgG
+
+This is link brain-progression asciinema game
+
+https://asciinema.org/a/f4KVN0srYXnVWm2WT7StyjUFi
+
+This is link brain-prime asciinema game
+

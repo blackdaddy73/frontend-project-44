@@ -8,6 +8,7 @@ import brainGCD from '../bin/games/brain-gcd.js';
 //import gameSelection from '../utilities/game-selection.js';
 let selection = Math.round(Math.random(1) * 2) + 1; //не более 3 вариантов, позже сделаем выбор макс вариантов
 let game = 1;
+selection = 3; //Для тестов временно
     switch (selection) {
         case 1: game = brainEven;
         break;

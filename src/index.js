@@ -8,7 +8,7 @@ import brainGCD from '../bin/games/brain-gcd.js';
 import brainProgression from '../bin/games/brain-progression.js';
 import brainPrime from '../bin/games/brain-prime.js';
 //ниже случайный выбор игры, после запуска index.js
-/*let selection = Math.round(Math.random(1) * 4) + 1; //не более 5 вариантов.
+let selection = Math.round(Math.random(1) * 4) + 1; //не более 5 вариантов.
 let game = 1;
     switch (selection) {
         case 1: game = brainEven;
@@ -21,7 +21,7 @@ let game = 1;
         break;
         case 5: game = brainPrime;
         break;
-    };*/
+    };
 let NumberOfAnswers = 0;
 for ( ; NumberOfAnswers !== 3; ) {
     let correctAnswer = game();

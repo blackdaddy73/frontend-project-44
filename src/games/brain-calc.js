@@ -1,5 +1,6 @@
-#!/usr/bin/env node
 import getRandomNumbers from '../../utilities/randomnumbers.js';
+import welcome from '../cli.js';
+
 const brainCalc = () => {
     const randomNumbers = getRandomNumbers();
     console.log('What is the result of the expression?');

@@ -1,9 +1,8 @@
-import getRandomNumbers from '../../utilities/randomnumbers.js';
-import welcome from '../cli.js';
-
-const brainCalc = () => {
+import getRandomNumbers from '../randomnumbers.js';
+import startAllGames from '../index.js';
+const description = 'What is the result of the expression?';
+const getGameData = () => {
     const randomNumbers = getRandomNumbers();
-    console.log('What is the result of the expression?');
     let randomAction = Math.round(Math.random(1) * 2) + 1;
     let correctAnswer = 0;
    switch (randomAction) {
@@ -20,7 +19,11 @@ const brainCalc = () => {
             correctAnswer = randomNumbers[0] * randomNumbers[1];
             break;
     };
-    console.log('Question: ', randomNumbers[0], randomAction, randomNumbers[1]);
-    return correctAnswer.toString();
+    const question = `Question: ${randomNumbers[0]} ${randomAction} ${randomNumbers[1]}`;
+    let gameData = [description, question, correctAnswer.toString()];
+    return gameData;
 };
-export default brainCalc;
+
+export default () => {
+    startAllGames(description, getGameData);
+  };

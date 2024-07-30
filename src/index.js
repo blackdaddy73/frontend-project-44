@@ -1,11 +1,14 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
-const name = welcome();
-const startAllGames = () => {
+import welcome from '../src/cli.js';
 let NumberOfAnswers = 0;
-for ( ; NumberOfAnswers !== 3; ) {
-    let correctAnswer = game();
-    const userAnswer = readlineSync.question('Your answer: ');
+const startAllGames = (description, getGameData) => {
+    const name = welcome();
+    console.log(description);
+    for ( ; NumberOfAnswers !== 3; ) {
+        const question = getGameData()[1];
+        const correctAnswer = getGameData()[2];
+        console.log(question);
+        const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
         console.log('Correct!');
         NumberOfAnswers += 1;
@@ -20,3 +23,4 @@ for ( ; NumberOfAnswers !== 3; ) {
     }
     else console.log(`Let's try again, ${name}!`);
 };
+export default startAllGames;

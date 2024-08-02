@@ -1,20 +1,28 @@
 #!/usr/bin/env node
-import getRandomNumbers from '../../utilities/randomnumbers.js';
-const brainPrime = () => {
-    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+import getRandomNumbers from '../randomnumbers.js';
+import startAllGames from '../index.js';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const getGameData = () => {
     const randomNumbers = getRandomNumbers();
     const isPrimeNumber = randomNumbers[0];
-    console.log('Question: ', isPrimeNumber);
-    let correctAnswer = "no";
+    const question = `Question: ${isPrimeNumber}`;
+    let correctAnswer = 'yes';
     if (isPrimeNumber % 2 === 0 || isPrimeNumber === 1) {
-        return correctAnswer;
-    }
+        correctAnswer = 'no';
+        const gameData = [question, correctAnswer];
+        return gameData;
+    } 
     for (let i = 2; i <= isPrimeNumber / 2 ; i += 1) {
         if (isPrimeNumber % i === 0) {
-            return correctAnswer;
+            correctAnswer = 'no';
+            const gameData = [question, correctAnswer];
+            return gameData;
         }
     }
-    correctAnswer = "yes";    
-    return correctAnswer;
+    const gameData = [question, correctAnswer];
+    return gameData;
 };
-export default brainPrime;
+
+export default () => {
+    startAllGames(description, getGameData);
+};

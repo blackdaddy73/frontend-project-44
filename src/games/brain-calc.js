@@ -20,11 +20,10 @@ const getGameData = () => {
             break;
     };
     const question = `Question: ${randomNumbers[0]} ${randomAction} ${randomNumbers[1]}`;
-    const gameData = [description, question, correctAnswer.toString()];
-    console.log(gameData);
+    const gameData = [question, correctAnswer.toString()];
     return gameData;
 };
 
 export default () => {
-    startAllGames(getGameData);
-  };
+    startAllGames(description, getGameData);
+};

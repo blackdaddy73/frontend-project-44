@@ -7,7 +7,7 @@ const getGameData = () => {
     const isPrimeNumber = randomNumbers[0];
     const question = `Question: ${isPrimeNumber}`;
     let correctAnswer = 'yes';
-    if (isPrimeNumber % 2 === 0 || isPrimeNumber === 1) {
+    if ((isPrimeNumber % 2 === 0 && isPrimeNumber > 2) || isPrimeNumber === 1) {
         correctAnswer = 'no';
         const gameData = [question, correctAnswer];
         return gameData;

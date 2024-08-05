@@ -8,17 +8,19 @@ const getGameData = () => {
   let correctAnswer = 0;
   switch (randomAction) {
     case 1:
-      randomAction = "+";
+      randomAction = '+';
       correctAnswer = randomNumbers[0] + randomNumbers[1];
       break;
     case 2:
-      randomAction = "-";
+      randomAction = '-';
       correctAnswer = randomNumbers[0] - randomNumbers[1];
       break;
     case 3:
-      randomAction = "*";
+      randomAction = '*';
       correctAnswer = randomNumbers[0] * randomNumbers[1];
       break;
+    default:
+      console.log('error');
   }
   const question = `Question: ${randomNumbers[0]} ${randomAction} ${randomNumbers[1]}`;
   const gameData = [question, correctAnswer.toString()];

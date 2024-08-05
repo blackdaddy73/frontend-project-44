@@ -1,18 +1,18 @@
 import readlineSync from 'readline-sync';
-import welcome from '../src/cli.js';
+import welcome from './cli.js';
 
 let NumberOfAnswers = 0;
 const startAllGames = (description, getGameData) => {
   const name = welcome();
   console.log(description);
-  for (; NumberOfAnswers !== 3; ) {
+  for (; NumberOfAnswers !== 3;) {
     const gameData = getGameData();
     const question = gameData[0];
     const correctAnswer = gameData[1];
     console.log(question);
-    const userAnswer = readlineSync.question("Your answer: ");
+    const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
       NumberOfAnswers += 1;
     } else {
       console.log(

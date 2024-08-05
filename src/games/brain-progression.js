@@ -13,8 +13,8 @@ const getGameData = () => {
     progressionArray[i] = progressionArray[i - 1] + stepProgression;
   }
   const correctAnswer = progressionArray[hiddenNumberInProgressionArray];
-  progressionArray[hiddenNumberInProgressionArray] = "..";
-  const question = `Question: ${progressionArray.join(" ")}`;
+  progressionArray[hiddenNumberInProgressionArray] = '..';
+  const question = `Question: ${progressionArray.join(' ')}`;
   const gameData = [question, correctAnswer.toString()];
   return gameData;
 };

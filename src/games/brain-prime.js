@@ -2,8 +2,7 @@
 import getRandomNumbers from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
-const description =
-  'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const getGameData = () => {
   const randomNumbers = getRandomNumbers();
   const isPrimeNumber = randomNumbers[0];

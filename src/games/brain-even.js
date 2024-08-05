@@ -5,14 +5,10 @@ import startAllGames from '../index.js';
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 const getGameData = () => {
   const randomNumbers = getRandomNumbers();
-  let isEven = true;
   let correctAnswer = 'yes';
   if (randomNumbers[0] % 2 === 0) {
-    isEven = true;
-    correctAnswer = 'yes'
-  }
-  else {
-    isEven = false;
+    correctAnswer = 'yes';
+  } else {
     correctAnswer = 'no';
   }
   const question = `Question: ${randomNumbers[0]}`;

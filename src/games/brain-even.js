@@ -7,8 +7,14 @@ const getGameData = () => {
   const randomNumbers = getRandomNumbers();
   let isEven = true;
   let correctAnswer = 'yes';
-  randomNumbers[0] % 2 === 0 ? (isEven = true) : (isEven = false);
-  isEven === true ? (correctAnswer = 'yes') : (correctAnswer = 'no');
+  if (randomNumbers[0] % 2 === 0) {
+    isEven = true;
+    correctAnswer = 'yes'
+  }
+  else {
+    isEven = false;
+    correctAnswer = 'no';
+  }
   const question = `Question: ${randomNumbers[0]}`;
   const gameData = [question, correctAnswer];
   return gameData;

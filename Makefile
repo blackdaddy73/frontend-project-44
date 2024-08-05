@@ -4,14 +4,14 @@ start: #запуск проекта
 
 	npm install ci
 
-startgame: #запускает игру
+startgame: #запуск игр
 
 	node bin/brain-games.js
-	node bin/games/brain-even.js
-	node bin/games/brain-calc.js
-	node bin/games/brain-gcd.js
-	node bin/games/brain-progression.js
-	node bin/games/brain-prime.js
+	node bin/brain-even.js
+	node bin/brain-calc.js
+	node bin/brain-gcd.js
+	node bin/brain-progression.js
+	node bin/brain-prime.js
 
 other: #прочие команды
 	npm publish --dry-run

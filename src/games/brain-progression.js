@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-import getRandomNumbers from "../randomnumbers.js";
-import startAllGames from "../index.js";
-const description = "What number is missing in the progression?";
+import getRandomNumbers from '../randomnumbers.js';
+import startAllGames from '../index.js';
+
+const description = 'What number is missing in the progression?';
 const getGameData = () => {
   const randomNumbers = getRandomNumbers();
   const startProgression = randomNumbers[0];

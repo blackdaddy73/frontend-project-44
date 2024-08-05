@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-import getRandomNumbers from "../randomnumbers.js";
-import startAllGames from "../index.js";
-const description = "Find the greatest common divisor of given numbers.";
+import getRandomNumbers from '../randomnumbers.js';
+import startAllGames from '../index.js';
+
+const description = 'Find the greatest common divisor of given numbers.';
 const getGameData = () => {
   const randomNumbers = getRandomNumbers();
   let maxNumber = Math.max(randomNumbers[0], randomNumbers[1]);

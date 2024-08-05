@@ -1,5 +1,6 @@
-import readlineSync from "readline-sync";
-import welcome from "../src/cli.js";
+import readlineSync from 'readline-sync';
+import welcome from '../src/cli.js';
+
 let NumberOfAnswers = 0;
 const startAllGames = (description, getGameData) => {
   const name = welcome();

@@ -1,6 +1,7 @@
-import getRandomNumbers from "../randomnumbers.js";
-import startAllGames from "../index.js";
-const description = "What is the result of the expression?";
+import getRandomNumbers from '../randomnumbers.js';
+import startAllGames from '../index.js';
+
+const description = 'What is the result of the expression?';
 const getGameData = () => {
   const randomNumbers = getRandomNumbers();
   let randomAction = Math.round(Math.random(1) * 2) + 1;

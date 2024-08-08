@@ -2,31 +2,32 @@ import getRandomNumbers from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
 const description = 'What is the result of the expression?';
+let correctAnswer = 0;
 const getGameData = () => {
   const randomNumbers = getRandomNumbers();
-  let randomAction = Math.round(Math.random(1) * 2) + 1;
-  let correctAnswer = 0;
-  switch (randomAction) {
-    case 1:
-      randomAction = '+';
-      correctAnswer = randomNumbers[0] + randomNumbers[1];
-      break;
-    case 2:
-      randomAction = '-';
-      correctAnswer = randomNumbers[0] - randomNumbers[1];
-      break;
-    case 3:
-      randomAction = '*';
-      correctAnswer = randomNumbers[0] * randomNumbers[1];
-      break;
-    default:
-      console.log('error');
-  }
-  const question = `Question: ${randomNumbers[0]} ${randomAction} ${randomNumbers[1]}`;
+  const num1 = randomNumbers[0];
+  const num2 = randomNumbers[1];
+  const arrAction = ['+', '-', '*'];
+  const action = arrAction[Math.floor(Math.random() * arrAction.length)];
+  correctAnswer = calculationСorrectAnswer(num1, action, num2);
+  const question = `Question: ${num1} ${action} ${num2}`;
   const gameData = [question, correctAnswer.toString()];
   return gameData;
-};
+}
 
 export default () => {
   startAllGames(description, getGameData);
+};
+
+const calculationСorrectAnswer = (num1, action, num2) => {
+  switch (action) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      console.log('error');
+  }
 };

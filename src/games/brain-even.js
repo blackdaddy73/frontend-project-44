@@ -2,6 +2,8 @@
 import getRandomNumbers from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
+const isEven = (number) => number % 2 === 0 ? true : false;
+
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 const getGameData = () => {
   const number = getRandomNumbers();
@@ -16,4 +18,3 @@ export default () => {
   startAllGames(description, getGameData);
 };
 
-const isEven = (number) => number % 2 === 0 ? true : false;

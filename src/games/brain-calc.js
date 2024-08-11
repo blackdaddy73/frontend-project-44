@@ -13,7 +13,7 @@ const getGameData = () => {
   const question = `Question: ${num1} ${action} ${num2}`;
   const gameData = [question, correctAnswer.toString()];
   return gameData;
-}
+};
 
 export default () => {
   startAllGames(description, getGameData);

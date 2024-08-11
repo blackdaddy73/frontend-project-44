@@ -8,7 +8,7 @@ const getGameData = () => {
   const randomNumbers = getRandomNumbers();
   const maxNumber = Math.max(randomNumbers[0], randomNumbers[1]);
   const minNumber = Math.min(randomNumbers[0], randomNumbers[1]);
-  correctAnswer = gcd(minNumber, maxNumber); //запуск функции gcd 
+  correctAnswer = gcd(minNumber, maxNumber); //запуск функции gcd
   const question = `Question: ${randomNumbers[0]} ${randomNumbers[1]}`;
   const gameData = [question, correctAnswer.toString()];
   return gameData;

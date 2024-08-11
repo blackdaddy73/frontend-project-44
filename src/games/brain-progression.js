@@ -27,5 +27,5 @@ const progression = (startProgression, stepProgression, lengthProgression) => {
   for (let i = 1; i < lengthProgression; i += 1) {
     progressionArray[i] = progressionArray[i - 1] + stepProgression;
   }
-  return progressionArray
+  return progressionArray;
 };

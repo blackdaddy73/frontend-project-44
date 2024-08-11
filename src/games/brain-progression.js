@@ -3,15 +3,14 @@ import getRandomNumbers from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
 const description = 'What number is missing in the progression?';
+let progressionArray = [];
 const getGameData = () => {
   const randomNumbers = getRandomNumbers();
   const startProgression = randomNumbers[0];
   const stepProgression = Math.round(randomNumbers[1] / 10 + 1);
-  const progressionArray = [startProgression];
+  const lengthProgression = 10;
   const hiddenNumberInProgressionArray = Math.round(Math.random(1) * 9);
-  for (let i = 1; i < 10; i += 1) {
-    progressionArray[i] = progressionArray[i - 1] + stepProgression;
-  }
+  progressionArray = progression(startProgression, stepProgression, lengthProgression);
   const correctAnswer = progressionArray[hiddenNumberInProgressionArray];
   progressionArray[hiddenNumberInProgressionArray] = '..';
   const question = `Question: ${progressionArray.join(' ')}`;
@@ -21,4 +20,12 @@ const getGameData = () => {
 
 export default () => {
   startAllGames(description, getGameData);
+};
+
+const progression = (startProgression, stepProgression, lengthProgression) => {
+  progressionArray[0] = startProgression;
+  for (let i = 1; i < lengthProgression; i += 1) {
+    progressionArray[i] = progressionArray[i - 1] + stepProgression;
+  }
+  return progressionArray
 };

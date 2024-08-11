@@ -2,16 +2,21 @@ import getRandomNumbers from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
 const calculationСorrectAnswer = (num1, action, num2) => {
+  let result = 0;
   switch (action) {
     case '+':
-      return num1 + num2;
+      result = num1 + num2;
+      break;
     case '-':
-      return num1 - num2;
+      result = num1 - num2;
+      break;
     case '*':
-      return num1 * num2;
+      result = num1 * num2;
+      break;
     default:
       console.log('error');
   }
+  return result;
 };
 
 const description = 'What is the result of the expression?';
@@ -31,4 +36,3 @@ const getGameData = () => {
 export default () => {
   startAllGames(description, getGameData);
 };
-

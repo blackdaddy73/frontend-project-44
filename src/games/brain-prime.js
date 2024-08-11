@@ -4,26 +4,26 @@ import startAllGames from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const getGameData = () => {
-  const randomNumbers = getRandomNumbers();
-  const isPrimeNumber = randomNumbers[0];
-  const question = `Question: ${isPrimeNumber}`;
-  let correctAnswer = 'yes';
-  if ((isPrimeNumber % 2 === 0 && isPrimeNumber > 2) || isPrimeNumber === 1) {
-    correctAnswer = 'no';
-    const gameData = [question, correctAnswer];
-    return gameData;
-  }
-  for (let i = 2; i <= isPrimeNumber / 2; i += 1) {
-    if (isPrimeNumber % i === 0) {
-      correctAnswer = 'no';
-      const gameData = [question, correctAnswer];
-      return gameData;
-    }
-  }
+  const number = getRandomNumbers();
+  let correctAnswer = isPrimeNumber(number[0]);
+  correctAnswer === true ? correctAnswer = 'yes' : correctAnswer = 'no';
+  const question = `Question: ${number[0]}`;
   const gameData = [question, correctAnswer];
   return gameData;
 };
 
 export default () => {
   startAllGames(description, getGameData);
+};
+
+const isPrimeNumber = (number) => {
+  if ((number % 2 === 0 && number > 3) || number === 1) {
+    return false;
+  }
+  for (let i = 2; i <= number / 2; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+    return true;
+  }
 };

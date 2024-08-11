@@ -2,6 +2,17 @@
 import getRandomNumbers from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
+const gcd = (minNumber, maxNumber) => {
+  let temp = 0;
+  while (minNumber !== 0) {
+    temp = minNumber;
+    minNumber = maxNumber % minNumber;
+    maxNumber = temp;
+    correctAnswer = temp;
+  }
+  return correctAnswer;
+};
+
 const description = 'Find the greatest common divisor of given numbers.';
 let correctAnswer = 0;
 const getGameData = () => {
@@ -18,13 +29,3 @@ export default () => {
   startAllGames(description, getGameData);
 };
 
-const gcd = (minNumber, maxNumber) => {
-  let temp = 0;
-  while (minNumber !== 0) {
-    temp = minNumber;
-    minNumber = maxNumber % minNumber;
-    maxNumber = temp;
-    correctAnswer = temp;
-  }
-  return correctAnswer;
-};

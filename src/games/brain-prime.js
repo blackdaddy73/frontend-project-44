@@ -27,4 +27,3 @@ const getGameData = () => {
 export default () => {
   startAllGames(description, getGameData);
 };
-

@@ -9,7 +9,7 @@ const gcd = (minNumber, maxNumber) => {
   let max = maxNumber;
   while (min !== 0) {
     temp = min;
-    minNumber = max % min;
+    min = max % min;
     max = temp;
     correctAnswer = temp;
   }

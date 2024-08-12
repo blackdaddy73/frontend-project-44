@@ -2,6 +2,7 @@
 import getRandomNumbers from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
+let progressionArray = [];
 const progression = (startProgression, stepProgression, lengthProgression) => {
   progressionArray[0] = startProgression;
   for (let i = 1; i < lengthProgression; i += 1) {
@@ -11,7 +12,6 @@ const progression = (startProgression, stepProgression, lengthProgression) => {
 };
 
 const description = 'What number is missing in the progression?';
-let progressionArray = [];
 const getGameData = () => {
   const randomNumbers = getRandomNumbers();
   const startProgression = randomNumbers[0];

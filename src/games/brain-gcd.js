@@ -27,8 +27,6 @@ const getGameData = () => {
   return gameData;
 };
 
-
-
 export default () => {
   startAllGames(description, getGameData);
 };

@@ -20,13 +20,12 @@ const calculationСorrectAnswer = (num1, action, num2) => {
 };
 
 const description = 'What is the result of the expression?';
-let correctAnswer = 0;
 const getGameData = () => {
   const num1 = generateRandomNumber();
   const num2 = generateRandomNumber();
   const arrAction = ['+', '-', '*'];
   const action = arrAction[Math.floor(Math.random() * arrAction.length)];
-  correctAnswer = calculationСorrectAnswer(num1, action, num2);
+  const correctAnswer = calculationСorrectAnswer(num1, action, num2);
   const question = `Question: ${num1} ${action} ${num2}`;
   const gameData = [question, correctAnswer.toString()];
   return gameData;

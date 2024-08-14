@@ -2,7 +2,7 @@ import generateRandomNumber from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
 const progression = (startProgression, stepProgression, lengthProgression) => {
-  const progressionArray =[];
+  const progressionArray = [];
   progressionArray[0] = startProgression;
   for (let i = 1; i < lengthProgression; i += 1) {
     progressionArray[i] = progressionArray[i - 1] + stepProgression;

@@ -1,4 +1,4 @@
-import getRandomNumbers from '../randomnumbers.js';
+import generateRandomNumber from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
 const calculationСorrectAnswer = (num1, action, num2) => {
@@ -22,9 +22,8 @@ const calculationСorrectAnswer = (num1, action, num2) => {
 const description = 'What is the result of the expression?';
 let correctAnswer = 0;
 const getGameData = () => {
-  const randomNumbers = getRandomNumbers();
-  const num1 = randomNumbers[0];
-  const num2 = randomNumbers[1];
+  const num1 = generateRandomNumber();
+  const num2 = generateRandomNumber();
   const arrAction = ['+', '-', '*'];
   const action = arrAction[Math.floor(Math.random() * arrAction.length)];
   correctAnswer = calculationСorrectAnswer(num1, action, num2);

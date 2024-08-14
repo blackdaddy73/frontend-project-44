@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-import getRandomNumbers from '../randomnumbers.js';
+import generateRandomNumber from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
 let progressionArray = [];
@@ -13,9 +12,8 @@ const progression = (startProgression, stepProgression, lengthProgression) => {
 
 const description = 'What number is missing in the progression?';
 const getGameData = () => {
-  const randomNumbers = getRandomNumbers();
-  const startProgression = randomNumbers[0];
-  const stepProgression = Math.round(randomNumbers[1] / 10 + 1);
+  const startProgression = generateRandomNumber();
+  const stepProgression = Math.round(generateRandomNumber() / 10 + 1);
   const lengthProgression = 10;
   const hiddenNumberInProgressionArray = Math.round(Math.random(1) * 9);
   progressionArray = progression(startProgression, stepProgression, lengthProgression);

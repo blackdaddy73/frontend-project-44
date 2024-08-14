@@ -17,6 +17,6 @@ const startAllGames = (description, getGameData) => {
       return;
     }
   }
-    console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 export default startAllGames;

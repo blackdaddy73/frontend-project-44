@@ -1,7 +1,6 @@
-const getRandomNumbers = () => {
-  const randomNumbers = [];
-  randomNumbers[0] = Math.round(Math.random(1) * 99) + 1;
-  randomNumbers[1] = Math.round(Math.random(1) * 99) + 1;
-  return randomNumbers;
+const generateRandomNumber = () => {
+  const forMaxRandomNumber = 99;
+  const randomNumber = Math.round(Math.random(1) * forMaxRandomNumber) + 1;
+  return randomNumber;
 };
-export default getRandomNumbers;
+export default generateRandomNumber;

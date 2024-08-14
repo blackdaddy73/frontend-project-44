@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-import getRandomNumbers from '../randomnumbers.js';
+import generateRandomNumber from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
 const isPrimeNumber = (number) => {
@@ -16,14 +15,14 @@ const isPrimeNumber = (number) => {
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const getGameData = () => {
-  const number = getRandomNumbers();
-  let correctAnswer = isPrimeNumber(number[0]);
+  const number = generateRandomNumber();
+  let correctAnswer = isPrimeNumber(number);
   if (correctAnswer === true) {
     correctAnswer = 'yes';
   } else {
     correctAnswer = 'no';
   }
-  const question = `Question: ${number[0]}`;
+  const question = `Question: ${number}`;
   const gameData = [question, correctAnswer];
   return gameData;
 };

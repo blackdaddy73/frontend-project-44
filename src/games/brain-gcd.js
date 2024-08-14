@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-import getRandomNumbers from '../randomnumbers.js';
+import generateRandomNumber from '../randomnumbers.js';
 import startAllGames from '../index.js';
 
 let correctAnswer = 0;
@@ -18,11 +17,12 @@ const gcd = (minNumber, maxNumber) => {
 
 const description = 'Find the greatest common divisor of given numbers.';
 const getGameData = () => {
-  const randomNumbers = getRandomNumbers();
-  const maxNumber = Math.max(randomNumbers[0], randomNumbers[1]);
-  const minNumber = Math.min(randomNumbers[0], randomNumbers[1]);
+  const number1 = generateRandomNumber();
+  const number2 = generateRandomNumber();
+  const maxNumber = Math.max(number1, number2);
+  const minNumber = Math.min(number1, number2);
   correctAnswer = gcd(minNumber, maxNumber);
-  const question = `Question: ${randomNumbers[0]} ${randomNumbers[1]}`;
+  const question = `Question: ${number1} ${number2}`;
   const gameData = [question, correctAnswer.toString()];
   return gameData;
 };

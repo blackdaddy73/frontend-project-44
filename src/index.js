@@ -4,10 +4,8 @@ import welcome from './cli.js';
 const startAllGames = (description, getGameData) => {
   const name = welcome();
   console.log(description);
-  for (let i = 0; i !== 3; i += 1) {
-    const gameData = getGameData();
-    const question = gameData[0];
-    const correctAnswer = gameData[1];
+  for (let i = 0; i < 3; i += 1) {
+    const [question, correctAnswer] = getGameData();
     console.log(question);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {

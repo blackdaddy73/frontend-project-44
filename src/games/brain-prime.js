@@ -16,12 +16,7 @@ const isPrimeNumber = (number) => {
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const getGameData = () => {
   const number = generateRandomNumber();
-  let correctAnswer = isPrimeNumber(number);
-  if (correctAnswer === true) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  const correctAnswer = isPrimeNumber(number) ? 'yes' : 'no';
   const question = `Question: ${number}`;
   const gameData = [question, correctAnswer];
   return gameData;
